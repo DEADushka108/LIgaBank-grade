@@ -111,10 +111,6 @@ module.exports = {
         to: path.resolve(__dirname, 'build/img/bg')
       },
       {
-        from: path.resolve(__dirname, 'src/img/content'),
-        to: path.resolve(__dirname, 'build/img/content')
-      },
-      {
         from: path.resolve(__dirname, 'src/fonts'),
         to: path.resolve(__dirname, 'build/fonts')
       }]
