@@ -33,7 +33,7 @@ const Header = () => {
         <nav className="page-header__main-nav main-nav">
           <ul className="main-nav__list">
             <li className="main-nav__item">
-              <Link to={AppRoute.ROOT} className="main-nav__link main-nav__link--active">
+              <Link to={AppRoute.ROOT} className="main-nav__link">
                 <span className="main-nav__text">Услуги</span>
               </Link>
             </li>
@@ -43,7 +43,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="main-nav__item">
-              <Link to={AppRoute.ROOT} className="main-nav__link">
+              <Link to={AppRoute.ROOT} className="main-nav__link main-nav__link--active">
                 <span className="main-nav__text">Конвертер валют</span>
               </Link>
             </li>

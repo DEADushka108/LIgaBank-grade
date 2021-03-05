@@ -1,34 +1,43 @@
-.page-header {
+.page-footer {
+  margin-top: 110px;
   width: auto;
   background-color: $bg-light-gray;
 }
 
-.page-header__wrapper {
+.page-footer__wrapper {
   width: 1170px;
   margin: 0 auto;
-  padding-top: 26px;
-  padding-bottom: 35px;
+  padding-top: 36px;
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
 }
 
-.page-header__logo {
+.page-footer__logo {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
+  padding-top: 12px;
   font-family: "Work Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 23px;
 }
 
-.page-header__text {
+.page-footer__text {
   margin: 0;
   margin-left: 10px;
   margin-top: 1px;
   padding-top: 6px;
 }
 
-.page-header__logo-text {
+.page-footer__logo-text {
   text-transform: uppercase;
+}
+
+.page-footer__address-info {
+  width: 252px;
+  font-size: 12px;
+  line-height: 17px;
+  color: $text-gray;
 }

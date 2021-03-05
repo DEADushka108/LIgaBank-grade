@@ -1,27 +1,81 @@
 .history-card {
   width: 1170px;
   margin: 0 auto;
+  padding-bottom: 40px;
   background-color: $bg-light-gray;
+}
+
+.history-card__title {
+  padding-top: 40px;
+  padding-left: 71px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 39px;
 }
 
 .history-card__wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 .history-card__list {
   padding: 0;
   margin: 0;
+  padding-left: 71px;
+  padding-top: 27px;
+  width: 378px;
   list-style: none;
+}
+
+.history-card__list:not(:first-child) {
+  position: relative;
+  padding-left: 262px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 138px;
+    width: 1px;
+    height: 289px;
+    background-color: #c1c2ca;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
 }
 
 .history-card__item {
   display: flex;
   flex-direction: row;
+  font-size: 18px;
+  line-height: 23px;
+  padding-bottom: 23px;
+  justify-content: space-between;
+}
+
+.history-card__item > p {
+  margin: 0;
+  padding: 0;
 }
 
 .history-card__arrow-icon {
+  position: relative;
+  top: 4px;
   width: 50px;
   height: 16px;
+}
+
+.history-card .history-card__sell {
+  margin-left: 32px;
+}
+
+.history-card__button {
+  margin-top: 24px;
+  margin-left: 71px;
+  padding: 18px 30px 15px 28px;
+  font-weight: 500;
+  border: none;
+  background-color: $bg-blue;
+  color: $text-white;
+  border-radius: 4px;
 }

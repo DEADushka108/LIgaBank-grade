@@ -1,13 +1,59 @@
 .promo-card {
+  position: relative;
   width: auto;
-  padding-top: 115px;
-  padding-bottom: 114px;
   background-color: $bg-blue;
 }
 
 .promo-card__wrapper {
+  position: relative;
   margin: 0 auto;
-  width: 918px;
+  width: 1170px;
+  padding-top: 102px;
+  padding-left: 90px;
+  padding-bottom: 131px;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    left: -52px;
+    top: 0;
+    position: absolute;
+    width: 150px;
+    height: 400px;
+    background: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027b3 99.79%);
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    right: -53px;
+    top: 0;
+    position: absolute;
+    width: 298px;
+    height: 400px;
+    background: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027b3 99.79%);
+    z-index: -1;
+  }
+}
+
+.promo-card__card-images {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.promo-card__black-card {
+  position: absolute;
+  right: 279px;
+  top: 119px;
+  z-index: 2;
+}
+
+.promo-card__white-card {
+  position: absolute;
+  right: 170px;
+  top: 61px;
+  z-index: 1;
 }
 
 .promo-card__title {
@@ -15,18 +61,44 @@
   font-size: 54px;
   font-weight: 700;
   line-height: 63px;
+  padding-left: 126px;
+  margin-bottom: 8px;
   color: $text-white;
 }
 
 .promo-card__text {
+  margin: 0;
   font-size: 22px;
   line-height: 26px;
+  padding-left: 126px;
   color: $text-white;
-  padding-bottom: 40px;
+  padding-bottom: 49px;
 }
 
 .promo-card__button {
-  padding: 21px 36px 19px;
+  margin-left: 126px;
+  padding: 15px 37px 16px 36px;
   background-color: $bg-white;
   border-radius: 4px;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
+}
+
+.promo-card__square-left {
+  position: absolute;
+  bottom: 0;
+  left: 99px;
+  width: 150px;
+  height: 269px;
+  background: linear-gradient(183.47deg, rgba(56, 65, 255, 0) 66.3%, #3841ff 97.14%);
+}
+
+.promo-card__square-right {
+  position: absolute;
+  bottom: 0;
+  right: 246px;
+  width: 270px;
+  height: 269px;
+  background: linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841ff 97.14%);
 }

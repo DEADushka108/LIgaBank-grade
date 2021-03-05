@@ -1,0 +1,22 @@
+.navigation {
+  margin-left: 42px;
+  margin-top: 3px;
+}
+
+.navigation__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.navigation__item {
+  width: 150px;
+  margin-bottom: 12px;
+}
+
+.navigation__link {
+  text-decoration: none;
+  line-height: 19px;
+  font-weight: 500;
+  color: inherit;
+}

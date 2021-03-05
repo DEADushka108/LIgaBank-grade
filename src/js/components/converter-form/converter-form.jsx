@@ -43,6 +43,9 @@ const ConverterForm = () => {
           <p className="converter__item">
             <label className="visually-hidden" htmlFor="date">Дата</label>
             <input className="converter__input" name="date" id="date" type="date"></input>
+            <svg className="converter__calendar-icon">
+              <use xlinkHref="#calendar"></use>
+            </svg>
           </p>
         </fieldset>
         <button className="converter__button" type="submit">Сохранить результат</button>
