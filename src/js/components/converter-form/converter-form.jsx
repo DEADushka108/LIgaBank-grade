@@ -4,7 +4,7 @@ const ConverterForm = () => {
 
   return <Fragment>
     <section className="page-main__converter converter">
-      <h2 className="converter__title">Коныертер валют</h2>
+      <h2 className="converter__title">Конвертер валют</h2>
       <form className="converter__form" action="#" method="GET">
         <fieldset className="converter__fieldset">
           <legend className="visually-hidden">Форма конвертера</legend>

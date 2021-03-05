@@ -1,0 +1,62 @@
+.converter {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.converter__form {
+  position: relative;
+}
+
+.converter__title {
+  font-size: 41px;
+  line-height: 43px;
+  font-weight: 700;
+}
+
+.converter__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.converter__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.converter__list-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.converter__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.converter__input {
+  width: 390px;
+  text-align: center;
+  padding: 13px 16px;
+  margin-right: 15px;
+}
+
+.converter__select {
+  padding: 13px 18px 13px 18px;
+}
+
+.converter__button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: $bg-blue;
+  border: none;
+  border-radius: 4px;
+  padding: 25px 102px 24px 101px;
+  color: $text-white;
+}

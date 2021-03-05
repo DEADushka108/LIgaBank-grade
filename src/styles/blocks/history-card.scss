@@ -1,0 +1,27 @@
+.history-card {
+  width: 1170px;
+  margin: 0 auto;
+  background-color: $bg-light-gray;
+}
+
+.history-card__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.history-card__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.history-card__item {
+  display: flex;
+  flex-direction: row;
+}
+
+.history-card__arrow-icon {
+  width: 50px;
+  height: 16px;
+}

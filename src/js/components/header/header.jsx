@@ -7,11 +7,11 @@ const Header = () => {
     <header className="page-header">
       <div className="page-header__wrapper">
         <a className="page-header__logo">
-          <svg width="30" height="27" viewBox="0 0 30 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="30" height="27" fill="#E5E5E5"/>
+          <svg className="page-header__logo-icon" width="30" height="27" viewBox="0 0 30 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="30" height="27"/>
             <g clipPath="url(#clip0)">
-              <rect width="1366" height="1812" transform="translate(-97 -26)" fill="white"/>
-              <rect x="-97" y="-26" width="1366" height="91" fill="#F6F7FF"/>
+              <rect width="1366" height="1812" transform="translate(-97 -26)"/>
+              <rect x="-97" y="-26" width="1366" height="91"/>
               <path d="M16.75 1H13.8333L1 22.3415H4.79167L6.54167 19.2927L16.75 1Z" fill="#2C36F2"/>
               <path d="M2.75 26H27.25L16.75 7.09756L15 10.1463L20.25 19.2927L22 22.3415H4.79167H1L2.75 26Z" fill="#2C36F2"/>
               <path d="M22 22.3415L20.25 19.2927H9.75H6.54167L4.79167 22.3415H22Z" fill="#2C36F2"/>
@@ -25,7 +25,10 @@ const Header = () => {
               </clipPath>
             </defs>
           </svg>
-          <p><span className="page-header__logo-text">Лига</span> банк</p>
+          <p className="page-header__text">
+            <span className="page-header__logo-text">Лига </span>
+            Банк
+          </p>
         </a>
         <nav className="page-header__main-nav main-nav">
           <ul className="main-nav__list">
@@ -59,7 +62,7 @@ const Header = () => {
         <div className="page-header__sign-in sign-in">
           <ul className="sign-in__list">
             <li className="sign-in__item">
-              <Link to={AppRoute.ROOT}>
+              <Link to={AppRoute.ROOT} className="sign-in__link">
                 <svg className="sign-in__icon">
                   <use xlinkHref="#sign-in"></use>
                 </svg>

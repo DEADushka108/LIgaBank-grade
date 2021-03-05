@@ -1,0 +1,32 @@
+.promo-card {
+  width: auto;
+  padding-top: 115px;
+  padding-bottom: 114px;
+  background-color: $bg-blue;
+}
+
+.promo-card__wrapper {
+  margin: 0 auto;
+  width: 918px;
+}
+
+.promo-card__title {
+  margin: 0;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 63px;
+  color: $text-white;
+}
+
+.promo-card__text {
+  font-size: 22px;
+  line-height: 26px;
+  color: $text-white;
+  padding-bottom: 40px;
+}
+
+.promo-card__button {
+  padding: 21px 36px 19px;
+  background-color: $bg-white;
+  border-radius: 4px;
+}
