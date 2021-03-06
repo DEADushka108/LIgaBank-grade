@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react';
+import { codes } from '../../utils/const';
 
 const ConverterForm = () => {
 
@@ -16,11 +17,9 @@ const ConverterForm = () => {
               </p>
               <p className="converter__item">
                 <select className="converter__select" id="sell">
-                  <option value="ru">RUB</option>
-                  <option value="us">USD</option>
-                  <option value="eu">EUR</option>
-                  <option value="gb">GBR</option>
-                  <option value="cn">CNY</option>
+                  {codes.map((code) => {
+                    return <option key={code} value={code}>{code}</option>})
+                  };
                 </select>
               </p>
             </li>
@@ -31,11 +30,9 @@ const ConverterForm = () => {
               </p>
               <p className="converter__item">
                 <select className="converter__select" id="buy">
-                  <option value="ru">RUB</option>
-                  <option value="us">USD</option>
-                  <option value="eu">EUR</option>
-                  <option value="gb">GBR</option>
-                  <option value="cn">CNY</option>
+                {codes.map((code) => {
+                    return <option key={code} value={code}>{code}</option>})
+                  };
                 </select>
               </p>
             </li>
