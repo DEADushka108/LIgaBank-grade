@@ -4,6 +4,11 @@ import Footer from '../footer/footer';
 import Header from '../header/header';
 import HistoryCard from '../history-card/history-card';
 import PromoCard from '../promo-card/promo-card';
+import withCodes from '../../hocs/with-codes/with-codes';
+import withAmount from '../../hocs/with-amount/with-amount';
+import withDate from '../../hocs/with-date/with-date';
+
+const ConverterFormWrapped = withDate(withAmount(withCodes(ConverterForm)));
 
 const Main = () => {
   return <Fragment>
@@ -13,7 +18,7 @@ const Main = () => {
 
       <PromoCard/>
 
-      <ConverterForm/>
+      <ConverterFormWrapped/>
 
       <HistoryCard/>
     </main>

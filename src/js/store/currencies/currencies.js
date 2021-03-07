@@ -17,11 +17,15 @@ const ActionCreator = {
 
 const Operation = {
   loadCurrencyExchange: (date, from, to) => (dispatch, _getState, api) => {
+    if (from === to) {
+      return dispatch(ActionCreator.loadCurrencyExchange(1));
+    } else {
     return api.get(`${date}?base=${from}`)
       .then(data => data.json())
       .then((response) => {
         dispatch(ActionCreator.loadCurrencyExchange(response.rates[to]));
       })
+    }
   }
 };
 
