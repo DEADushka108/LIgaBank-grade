@@ -7,11 +7,7 @@ export const createAPI = () => {
   const api = axios.create({
     baseURL: BASE_URL,
     timeout: REQUEST_TIMEOUT,
-    // withCredentials: true,
-    headers: {
-      'Access-Control-Allow-Origin' : '*',
-      'Access-Control-Allow-Methods':'GET',
-      }
+    withCredentials: false,
   });
 
   const onSuccess = (response) => response;
