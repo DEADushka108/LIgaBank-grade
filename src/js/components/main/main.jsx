@@ -7,10 +7,13 @@ import PromoCard from '../promo-card/promo-card';
 import withCodes from '../../hocs/with-codes/with-codes';
 import withAmount from '../../hocs/with-amount/with-amount';
 import withDate from '../../hocs/with-date/with-date';
+import {getCurrencyExchange} from '../../store/currencies/selector';
+import {connect} from 'react-redux';
 
 const ConverterFormWrapped = withDate(withAmount(withCodes(ConverterForm)));
 
-const Main = () => {
+const Main = (props) => {
+  const {exchangeCurrency} = props;
   return <Fragment>
     <Header/>
     <main className="page-main">
@@ -18,7 +21,7 @@ const Main = () => {
 
       <PromoCard/>
 
-      <ConverterFormWrapped/>
+      <ConverterFormWrapped exchangeCurrency={exchangeCurrency}/>
 
       <HistoryCard/>
     </main>
@@ -28,4 +31,9 @@ const Main = () => {
   </Fragment>;
 };
 
-export default Main;
+const mapStateToProps = (state) => ({
+  exchangeCurrency: getCurrencyExchange(state),
+})
+
+export {Main}
+export default connect(mapStateToProps)(Main);

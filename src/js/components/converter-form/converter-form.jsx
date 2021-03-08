@@ -11,6 +11,11 @@ class ConverterForm extends PureComponent {
     this._handleChangeRates = this._handleChangeRates.bind(this);
   }
 
+  componentDidUpdate() {
+    const {date, sellCode, buyCode, loadCurrencyExchange} = this.props;
+    loadCurrencyExchange(date, sellCode, buyCode)
+  }
+
   _handleChangeRates() {
     const {date, sellCode, buyCode, loadCurrencyExchange} = this.props;
     loadCurrencyExchange(date, sellCode, buyCode);
@@ -82,10 +87,6 @@ class ConverterForm extends PureComponent {
 
 ConverterForm.propTypes = {};
 
-const mapStateToProps = (state) => ({
-  currencyExchange: getCurrencyExchange(state),
-});
-
 const mapDispatchToProps = (dispatch) => ({
   loadCurrencyExchange(date, from, to) {
     dispatch(CurrencyOperation.loadCurrencyExchange(date, from, to));
@@ -93,4 +94,4 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 export {ConverterForm}
-export default connect(mapStateToProps, mapDispatchToProps)(ConverterForm);
+export default connect(null, mapDispatchToProps)(ConverterForm);
