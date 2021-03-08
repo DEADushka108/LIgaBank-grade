@@ -9,11 +9,12 @@ import withAmount from '../../hocs/with-amount/with-amount';
 import withDate from '../../hocs/with-date/with-date';
 import {getCurrencyExchange} from '../../store/currencies/selector';
 import {connect} from 'react-redux';
+import {getStories} from '../../store/stories/selector';
 
 const ConverterFormWrapped = withDate(withAmount(withCodes(ConverterForm)));
 
 const Main = (props) => {
-  const {exchangeCurrency} = props;
+  const {exchangeCurrency, stories} = props;
   return <Fragment>
     <Header/>
     <main className="page-main">
@@ -23,7 +24,7 @@ const Main = (props) => {
 
       <ConverterFormWrapped exchangeCurrency={exchangeCurrency}/>
 
-      <HistoryCard/>
+      <HistoryCard stories={stories}/>
     </main>
 
     <Footer/>
@@ -33,7 +34,8 @@ const Main = (props) => {
 
 const mapStateToProps = (state) => ({
   exchangeCurrency: getCurrencyExchange(state),
-})
+  stories: getStories(state),
+});
 
 export {Main}
 export default connect(mapStateToProps)(Main);
