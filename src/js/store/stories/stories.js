@@ -10,9 +10,9 @@ const ActionType = {
 };
 
 const ActionCreator = {
-  updateStories: (stories) => ({
+  updateStories: (story) => ({
     type: ActionType.UPDATE_STORIES,
-    payload: stories,
+    payload: story,
   }),
   deleteStories: () => ({
     type: ActionType.DELETE_STORIES,
@@ -24,7 +24,7 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ActionType.UPDATE_STORIES:
       return extend(state, {
-        stories: action.payload,
+        stories: [action.payload, ...state.stories].slice(0, 10),
       });
     case ActionType.DELETE_STORIES:
       return extend(state, {

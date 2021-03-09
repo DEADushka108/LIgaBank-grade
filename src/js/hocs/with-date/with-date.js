@@ -7,9 +7,9 @@ const withDate = (Component) => {
       super(props);
 
       this.state = {
-        date: moment().format('YYYY-MM-DD'),
-        dateTo: moment().format('YYYY-MM-DD'),
-        dateFrom: moment().day(-7).format('YYYY-MM-DD'),
+        date: moment().format(`YYYY-MM-DD`),
+        dateTo: moment().format(`YYYY-MM-DD`),
+        dateFrom: moment().subtract(7, `d`).format(`YYYY-MM-DD`),
       };
 
       this._handleDateChange = this._handleDateChange.bind(this);
@@ -17,7 +17,7 @@ const withDate = (Component) => {
 
     _handleDateChange(evt) {
       this.setState({
-        date: moment(evt.target.value).format('YYYY-MM-DD'),
+        date: moment(evt.target.value).format(`YYYY-MM-DD`),
       });
     }
 
@@ -30,7 +30,7 @@ const withDate = (Component) => {
         dateFrom={dateFrom}
         dateTo={dateTo}
         onDateChange={this._handleDateChange}
-        />;
+      />;
     }
   }
 

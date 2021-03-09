@@ -1,8 +1,8 @@
 import React, {Fragment} from 'react';
-import ConverterForm from '../converter-form/converter-form';
+import PropTypes from 'prop-types';
+import ConverterCard from '../converter-card/converter-card';
 import Footer from '../footer/footer';
 import Header from '../header/header';
-import HistoryCard from '../history-card/history-card';
 import PromoCard from '../promo-card/promo-card';
 import withCodes from '../../hocs/with-codes/with-codes';
 import withAmount from '../../hocs/with-amount/with-amount';
@@ -11,10 +11,10 @@ import {getCurrencyExchange} from '../../store/currencies/selector';
 import {connect} from 'react-redux';
 import {getStories} from '../../store/stories/selector';
 
-const ConverterFormWrapped = withDate(withAmount(withCodes(ConverterForm)));
+const ConverterCardWrapped = withDate(withAmount(withCodes(ConverterCard)));
 
 const Main = (props) => {
-  const {exchangeCurrency, stories} = props;
+  const {exchangeCurrency} = props;
   return <Fragment>
     <Header/>
     <main className="page-main">
@@ -22,9 +22,8 @@ const Main = (props) => {
 
       <PromoCard/>
 
-      <ConverterFormWrapped exchangeCurrency={exchangeCurrency}/>
+      <ConverterCardWrapped exchangeCurrency={exchangeCurrency}/>
 
-      <HistoryCard stories={stories}/>
     </main>
 
     <Footer/>
@@ -32,10 +31,14 @@ const Main = (props) => {
   </Fragment>;
 };
 
+Main.propTypes = {
+  exchangeCurrency: PropTypes.number.isRequired,
+};
+
 const mapStateToProps = (state) => ({
   exchangeCurrency: getCurrencyExchange(state),
   stories: getStories(state),
 });
 
-export {Main}
+export {Main};
 export default connect(mapStateToProps)(Main);

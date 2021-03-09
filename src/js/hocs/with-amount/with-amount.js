@@ -1,4 +1,5 @@
 import React, {PureComponent} from 'react';
+import PropTypes from 'prop-types';
 
 const withAmount = (Component) => {
   class WithAmount extends PureComponent {
@@ -6,8 +7,8 @@ const withAmount = (Component) => {
       super(props);
 
       this.state = {
-        sellAmount: 0,
-        buyAmount: 0,
+        sellAmount: `0`,
+        buyAmount: `0`,
         amountInFromCurrency: true,
       };
 
@@ -20,11 +21,11 @@ const withAmount = (Component) => {
       if (exchangeCurrency !== prevProps.exchangeCurrency) {
         if (this.state.amountInFromCurrency) {
           this.setState({
-            buyAmount: (this.state.sellAmount * exchangeCurrency).toFixed(2),
+            buyAmount: Number(this.state.sellAmount * exchangeCurrency).toFixed(2),
           });
         } else {
           this.setState({
-            sellAmount: (this.state.buyAmount / exchangeCurrency).toFixed(2),
+            sellAmount: Number(this.state.buyAmount / exchangeCurrency).toFixed(2),
           });
         }
       }
@@ -57,11 +58,13 @@ const withAmount = (Component) => {
         buyAmount={buyAmount}
         onSellAmountChange={this._handleSellAmountChange}
         onBuyAmountChange={this._handleBuyAmountChange}
-        />;
+      />;
     }
   }
 
-  WithAmount.proptypes = {};
+  WithAmount.propTypes = {
+    exchangeCurrency: PropTypes.number.isRequired,
+  };
 
   return WithAmount;
 };
