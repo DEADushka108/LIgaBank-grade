@@ -1,0 +1,137 @@
+.converter {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.converter__form {
+  position: relative;
+}
+
+.converter__title {
+  padding-top: 19px;
+  padding-bottom: 6px;
+  font-size: 41px;
+  line-height: 43px;
+  font-weight: 700;
+}
+
+.converter__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.converter__list {
+  margin: 0;
+  padding: 0;
+  margin-left: 1px;
+  margin-bottom: 69px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.converter__list-item {
+  display: flex;
+  flex-direction: row;
+
+  &--icons {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.converter__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.converter__label {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 31px;
+  margin-bottom: 22px;
+}
+
+.converter__input {
+  width: 356px;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 500;
+  text-align: center;
+  padding: 13px 16px 11px;
+  margin-right: 15px;
+  border-radius: 4px;
+  border: 1px solid #1f1e25;
+  background-color: transparent;
+}
+
+.converter__select {
+  font-size: 30px;
+  border-radius: 4px;
+  line-height: 40px;
+  padding: 9px 42px 9px 17px;
+  border: 1px solid #1f1e25;
+  appearance: none;
+  background-image: url("./img/bg/select-down.svg");
+  background-repeat: no-repeat;
+  background-position: top 24px right 15px;
+}
+
+.converter__arrow-icon {
+  position: relative;
+  width: 53px;
+  height: 18px;
+
+  &--right {
+    top: 3px;
+    left: 33px;
+  }
+
+  &--left {
+    bottom: 15px;
+    right: 23px;
+  }
+}
+
+.converter__calendar-icon {
+  position: absolute;
+  left: 330px;
+  top: 6px;
+  width: 42px;
+  height: 44px;
+  background-color: $bg-white;
+  z-index: 1;
+}
+
+.converter__button {
+  position: absolute;
+  right: -1px;
+  bottom: 16px;
+  background-color: $button-blue;
+  border: none;
+  border-radius: 4px;
+  padding: 17px 102px 18px 101px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  color: $text-white;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border: 2px solid $button-blue;
+    color: $text-blue;
+    background-color: $button-white;
+    padding: 15px 100px 16px 99px;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}

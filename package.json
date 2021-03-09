@@ -4,12 +4,11 @@
   "description": "Test for HTMLAcademy",
   "main": "index.js",
   "scripts": {
-    "test": "npm run stylelint && npm run eslint && npm run test.jest",
+    "test": "npm run stylelint && npm run eslint",
     "eslint": "eslint --ext .jsx --ext .js src/",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
-    "test.jest": "jest",
     "stylelint": "stylelint \"src/styles/**/*.scss\" --syntax scss"
   },
   "repository": {
@@ -28,11 +27,18 @@
   },
   "homepage": "https://github.com/DEADushka108/LigaBank-grade#readme",
   "dependencies": {
+    "axios": "0.21.1",
     "history": "4.10.1",
+    "moment": "2.29.1",
+    "moment-locales-webpack-plugin": "1.2.0",
     "prop-types": "15.7.2",
     "react": "16.14.0",
     "react-dom": "16.14.0",
-    "react-router-dom": "5.2.0"
+    "react-redux": "7.2.2",
+    "react-router-dom": "5.2.0",
+    "redux": "4.0.5",
+    "redux-devtools-extension": "2.13.9",
+    "redux-thunk": "2.3.0"
   },
   "devDependencies": {
     "@babel/core": "7.13.8",
