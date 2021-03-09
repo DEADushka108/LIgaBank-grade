@@ -53,7 +53,7 @@ class ConverterCard extends PureComponent {
               <li className="converter__list-item">
                 <p className="converter__item">
                   <label className="converter__label" htmlFor="currency-sell">У меня есть</label>
-                  <input className="converter__input" id="currency-sell" type="number" step="0.05" name="currency-sell" value={sellAmount} onChange={(evt) => {
+                  <input className="converter__input" id="currency-sell" type="number" name="currency-sell" value={sellAmount} onChange={(evt) => {
                     onSellAmountChange(evt);
                   }}/>
                 </p>
@@ -79,7 +79,7 @@ class ConverterCard extends PureComponent {
               <li className="converter__list-item">
                 <p className="converter__item">
                   <label className="converter__label" htmlFor="currency-buy">Хочу приобрести</label>
-                  <input className="converter__input" id="currency-buy" type="number" step="0.05" name="currency-buy" value={buyAmount} onChange={(evt) => {
+                  <input className="converter__input" id="currency-buy" type="number" name="currency-buy" value={buyAmount} onChange={(evt) => {
                     onBuyAmountChange(evt);
                   }}/>
                 </p>
@@ -100,9 +100,9 @@ class ConverterCard extends PureComponent {
               <input className="converter__input converter__input--calendar" name="date" id="date" type="date" value={date} min={dateFrom} max={dateTo} onChange={(evt) => {
                 onDateChange(evt);
               }}></input>
-              {/* <svg className="converter__calendar-icon">
+              <svg className="converter__calendar-icon">
                 <use xlinkHref="#calendar"></use>
-              </svg> */}
+              </svg>
             </p>
           </fieldset>
           <button className="converter__button" type="submit">

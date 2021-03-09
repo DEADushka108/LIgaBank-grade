@@ -71,15 +71,6 @@
   background-color: transparent;
 }
 
-::-webkit-calendar-picker-indicator {
-  color: transparent;
-  opacity: 1;
-  background-image: url("./img/bg/calendar.svg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 32px;
-}
-
 .converter__select {
   font-size: 30px;
   border-radius: 4px;
@@ -95,8 +86,19 @@
 }
 
 .converter__arrow-icon {
-  width: 50px;
-  height: 16px;
+  position: relative;
+  width: 53px;
+  height: 18px;
+
+  &--right {
+    top: 3px;
+    left: 33px;
+  }
+
+  &--left {
+    bottom: 15px;
+    right: 23px;
+  }
 }
 
 .converter__calendar-icon {
@@ -105,7 +107,8 @@
   top: 6px;
   width: 42px;
   height: 44px;
-  z-index: -1;
+  background-color: $bg-white;
+  z-index: 1;
 }
 
 .converter__button {
