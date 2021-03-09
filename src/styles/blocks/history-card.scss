@@ -25,7 +25,6 @@
   margin: 0;
   padding-left: 71px;
   padding-top: 22px;
-  width: 378px;
   list-style: none;
 }
 
@@ -48,10 +47,12 @@
 .history-card__item {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 1;
   font-size: 18px;
   line-height: 23px;
   padding-bottom: 23px;
-  justify-content: space-between;
+  text-align: center;
 }
 
 .history-card__item > p {

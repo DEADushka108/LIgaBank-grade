@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {ActionCreator as StoriesAction} from '../../store/stories/stories';
 import {getStories} from '../../store/stories/selector';
+import {ColumnQuantity} from '../../utils/const';
 
 class HistoryCard extends PureComponent {
   constructor(props) {
@@ -23,7 +24,7 @@ class HistoryCard extends PureComponent {
         <h3 className="history-card__title">История конвертаций</h3>
         <div className="history-card__wrapper">
           <ul className="history-card__list">
-            {stories.slice(0, 5).map((story, index) => {
+            {stories.slice(ColumnQuantity.FIRST.START, ColumnQuantity.FIRST.END).map((story, index) => {
               const {date, sellAmount, sellCode, buyAmount, buyCode} = story;
               return <li key={index} className="history-card__item">
                 <p className="history-card__date">{date}</p>
@@ -35,8 +36,8 @@ class HistoryCard extends PureComponent {
               </li>;
             })}
           </ul>
-          {stories.length > 5 && <ul className="history-card__list">
-            {stories.slice(5, 10).map((story, index) => {
+          {stories.length > ColumnQuantity.FIRST.END && <ul className="history-card__list">
+            {stories.slice(ColumnQuantity.SECOND.START, ColumnQuantity.SECOND.END).map((story, index) => {
               const {date, sellAmount, sellCode, buyAmount, buyCode} = story;
               return <li key={index} className="history-card__item">
                 <p className="history-card__date">{date}</p>

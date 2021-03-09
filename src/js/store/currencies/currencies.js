@@ -20,10 +20,10 @@ const Operation = {
     if (from === to) {
       return dispatch(ActionCreator.loadCurrencyExchange(1));
     } else {
-    return api.get(`${date}?base=${from}`)
+      return api.get(`${date}?base=${from}`)
       .then((response) => {
         dispatch(ActionCreator.loadCurrencyExchange(response.data.rates[to]));
-      })
+      });
     }
   }
 };

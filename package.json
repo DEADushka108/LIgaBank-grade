@@ -4,12 +4,11 @@
   "description": "Test for HTMLAcademy",
   "main": "index.js",
   "scripts": {
-    "test": "npm run stylelint && npm run eslint && npm run test.jest",
+    "test": "npm run stylelint && npm run eslint",
     "eslint": "eslint --ext .jsx --ext .js src/",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
-    "test.jest": "jest",
     "stylelint": "stylelint \"src/styles/**/*.scss\" --syntax scss"
   },
   "repository": {

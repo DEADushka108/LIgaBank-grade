@@ -21,7 +21,7 @@ const withCodes = (Component) => {
       });
     }
 
-    _handleBuyCodeChange(evt){
+    _handleBuyCodeChange(evt) {
       this.setState({
         buyCode: evt.target.value,
       });
@@ -36,7 +36,7 @@ const withCodes = (Component) => {
         buyCode={buyCode}
         onSellCodeChange={this._handleSellCodeChange}
         onBuyCodeChange={this._handleBuyCodeChange}
-        />;
+      />;
     }
   }
 

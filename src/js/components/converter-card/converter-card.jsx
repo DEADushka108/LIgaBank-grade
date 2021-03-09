@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import HistoryCard from '../history-card/history-card';
 import {Operation as CurrencyOperation} from '../../store/currencies/currencies';
 import {ActionCreator as StoriesAction} from '../../store/stories/stories';
-import {codes} from '../../utils/const';
 import {connect} from 'react-redux';
 import {getStories} from '../../store/stories/selector';
 import moment from 'moment';
+import ConverterSelect from '../converter-selector/converter-selector';
 
 class ConverterCard extends PureComponent {
   constructor(props) {
@@ -58,14 +58,7 @@ class ConverterCard extends PureComponent {
                   }}/>
                 </p>
                 <p className="converter__item">
-                  <select className="converter__select" id="sell" onChange={(evt) => {
-                    onSellCodeChange(evt);
-                  }}>
-                    {codes.map((code) => {
-                      return <option key={code} value={code}>{code}</option>;
-                    })
-                    };
-                  </select>
+                  <ConverterSelect onChange={onSellCodeChange}/>
                 </p>
               </li>
               <li className="converter__list-item converter__list-item--icons">
@@ -84,14 +77,7 @@ class ConverterCard extends PureComponent {
                   }}/>
                 </p>
                 <p className="converter__item">
-                  <select className="converter__select" id="buy" onChange={(evt) => {
-                    onBuyCodeChange(evt);
-                  }}>
-                    {codes.map((code) => {
-                      return <option key={code} value={code}>{code}</option>;
-                    })
-                    };
-                  </select>
+                  <ConverterSelect onChange={onBuyCodeChange}/>
                 </p>
               </li>
             </ul>
