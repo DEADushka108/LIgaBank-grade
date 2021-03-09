@@ -21,4 +21,14 @@
   &--active {
     color: $text-blue;
   }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: $text-black;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }

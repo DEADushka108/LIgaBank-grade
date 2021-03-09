@@ -1,5 +1,10 @@
 export const AppRoute = {
   ROOT: `/`,
+  CREDIT: `/credit`,
+  CONTACTS: `/contacts`,
+  FEEDBACK: `/feedback`,
+  SERVICES: `/services`,
+  LOGIN: `/login`,
 };
 
 export const currencyCodes = [`RUB`, `USD`, `GBP`, `EUR`, `CNY`];

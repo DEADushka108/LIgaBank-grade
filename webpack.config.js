@@ -91,7 +91,9 @@ module.exports = {
   },
   devtool: 'source-map',
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      dry: isDev,
+    }),
     new MomentLocalesPlugin({
       localesToKeep: ['es-us', 'ru'],
   }),

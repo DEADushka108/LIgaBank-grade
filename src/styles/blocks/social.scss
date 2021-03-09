@@ -14,6 +14,19 @@
   flex-wrap: wrap;
 }
 
+.social__link {
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    fill: $text-blue;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
 .social__icon {
   width: 9px;
   height: 16px;

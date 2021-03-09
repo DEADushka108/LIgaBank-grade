@@ -38,22 +38,22 @@ const Footer = () => {
         <nav className="page-footer__nav navigation">
           <ul className="navigation__list">
             <li className="navigation__item">
-              <Link to={AppRoute.ROOT} className="navigation__link">
+              <Link to={AppRoute.SERVICES} className="navigation__link">
                 <span className="navigation__text">Услуги</span>
               </Link>
             </li>
             <li className="navigation__item">
-              <Link to={AppRoute.ROOT} className="navigation__link">
+              <Link to={AppRoute.CREDIT} className="navigation__link">
                 <span className="navigation__text">Рассчитать кредит</span>
               </Link>
             </li>
             <li className="navigation__item">
-              <Link to={AppRoute.ROOT} className="navigation__link">
+              <Link to={AppRoute.CONTACTS} className="navigation__link">
                 <span className="navigation__text">Контакты</span>
               </Link>
             </li>
             <li className="navigation__item">
-              <Link to={AppRoute.ROOT} className="navigation__link">
+              <Link to={AppRoute.FEEDBACK} className="navigation__link">
                 <span className="navigation__text">Задать вопрос</span>
               </Link>
             </li>
@@ -81,7 +81,7 @@ const Footer = () => {
           <ul className="social__list">
             <li className="social__item">
               <a href="http://www.facebook.com" className="social__link">
-                <svg className="social__icon social__icon--facebook">
+                <svg width="9px" height="16px" className="social__icon social__icon--facebook">
                   <use xlinkHref="#facebook-icon"></use>
                 </svg>
                 <span className="visually-hidden">facebook</span>
@@ -89,7 +89,7 @@ const Footer = () => {
             </li>
             <li className="social__item">
               <a href="http://www.instagram.com" className="social__link">
-                <svg className="social__icon social__icon--instagram">
+                <svg width="16px" height="16px" className="social__icon social__icon--instagram">
                   <use xlinkHref="#instagram-icon"></use>
                 </svg>
                 <span className="visually-hidden">instagram</span>
@@ -97,7 +97,7 @@ const Footer = () => {
             </li>
             <li className="social__item">
               <a href="http://www.twitter.com" className="social__link">
-                <svg className="social__icon social__icon--twitter">
+                <svg width="16px" height="13px" className="social__icon social__icon--twitter">
                   <use xlinkHref="#twitter-icon"></use>
                 </svg>
                 <span className="visually-hidden">twitter</span>
@@ -105,7 +105,7 @@ const Footer = () => {
             </li>
             <li className="social__item">
               <a href="http://www.youtube.com" className="social__link">
-                <svg className="social__icon social__icon--youtube">
+                <svg width="16px" height="13px" className="social__icon social__icon--youtube">
                   <use xlinkHref="#youtube-icon"></use>
                 </svg>
                 <span className="visually-hidden">youtube</span>

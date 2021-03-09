@@ -24,4 +24,15 @@
 .sign-in__link {
   text-decoration: none;
   color: inherit;
+
+  &:hover,
+  &:focus {
+    color: $text-blue;
+    text-decoration: underline;
+    fill: $text-blue;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }

@@ -33,12 +33,12 @@ const Header = () => {
         <nav className="page-header__main-nav main-nav">
           <ul className="main-nav__list">
             <li className="main-nav__item">
-              <Link to={AppRoute.ROOT} className="main-nav__link">
+              <Link to={AppRoute.SERVICES} className="main-nav__link">
                 <span className="main-nav__text">Услуги</span>
               </Link>
             </li>
             <li className="main-nav__item">
-              <Link to={AppRoute.ROOT} className="main-nav__link">
+              <Link to={AppRoute.CREDIT} className="main-nav__link">
                 <span className="main-nav__text">Рассчитать кредит</span>
               </Link>
             </li>
@@ -48,12 +48,12 @@ const Header = () => {
               </Link>
             </li>
             <li className="main-nav__item">
-              <Link to={AppRoute.ROOT} className="main-nav__link">
+              <Link to={AppRoute.CONTACTS} className="main-nav__link">
                 <span className="main-nav__text">Контакты</span>
               </Link>
             </li>
             <li className="main-nav__item">
-              <Link to={AppRoute.ROOT} className="main-nav__link">
+              <Link to={AppRoute.FEEDBACK} className="main-nav__link">
                 <span className="main-nav__text">Задать вопрос</span>
               </Link>
             </li>
@@ -62,7 +62,7 @@ const Header = () => {
         <div className="page-header__sign-in sign-in">
           <ul className="sign-in__list">
             <li className="sign-in__item">
-              <Link to={AppRoute.ROOT} className="sign-in__link">
+              <Link to={AppRoute.LOGIN} className="sign-in__link">
                 <svg className="sign-in__icon">
                   <use xlinkHref="#sign-in"></use>
                 </svg>

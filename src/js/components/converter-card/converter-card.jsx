@@ -62,10 +62,10 @@ class ConverterCard extends PureComponent {
                 </p>
               </li>
               <li className="converter__list-item converter__list-item--icons">
-                <svg className="converter__arrow-icon converter__arrow-icon--right">
+                <svg width="53px" height="18px" className="converter__arrow-icon converter__arrow-icon--right">
                   <use xlinkHref="#arrow-right"></use>
                 </svg>
-                <svg className="converter__arrow-icon converter__arrow-icon--left">
+                <svg width="53px" height="18px" className="converter__arrow-icon converter__arrow-icon--left">
                   <use xlinkHref="#arrow-left"></use>
                 </svg>
               </li>
@@ -86,7 +86,7 @@ class ConverterCard extends PureComponent {
               <input className="converter__input converter__input--calendar" name="date" id="date" type="date" value={date} min={dateFrom} max={dateTo} onChange={(evt) => {
                 onDateChange(evt);
               }}></input>
-              <svg className="converter__calendar-icon">
+              <svg width="42px" height="44px" className="converter__calendar-icon">
                 <use xlinkHref="#calendar"></use>
               </svg>
             </p>

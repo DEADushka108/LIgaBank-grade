@@ -19,4 +19,13 @@
   line-height: 19px;
   font-weight: 500;
   color: inherit;
+
+  &:hover,
+  &:focus {
+    color: $text-blue;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }

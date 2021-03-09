@@ -78,11 +78,20 @@
 .promo-card__button {
   margin-left: 126px;
   padding: 15px 37px 16px 36px;
-  background-color: $bg-white;
+  background-color: $button-white;
   border-radius: 4px;
   font-size: 18px;
   line-height: 21px;
   font-weight: 500;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $text-white;
+    border: 2px solid $button-white;
+    background-color: $button-blue;
+    padding: 13px 35px 14px 33px;
+  }
 }
 
 .promo-card__square-left {
