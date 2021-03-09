@@ -30,9 +30,9 @@ class ConverterCard extends PureComponent {
     const {updateStories, date, sellAmount, sellCode, buyAmount, buyCode} = this.props;
     const story = {
       date: moment(date).format(`DD.MM.YYYY`),
-      sellAmount,
+      sellAmount: Number(sellAmount).toFixed(2),
       sellCode,
-      buyAmount,
+      buyAmount: Number(buyAmount).toFixed(2),
       buyCode,
     };
     updateStories(story);

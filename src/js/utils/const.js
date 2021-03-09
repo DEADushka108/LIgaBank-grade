@@ -2,7 +2,7 @@ export const AppRoute = {
   ROOT: `/`,
 };
 
-export const codes = [`RUB`, `USD`, `GBP`, `EUR`, `CNY`];
+export const currencyCodes = [`RUB`, `USD`, `GBP`, `EUR`, `CNY`];
 
 export const ColumnQuantity = {
   FIRST: {
@@ -14,3 +14,5 @@ export const ColumnQuantity = {
     END: 10,
   },
 };
+
+export const MAX_HISTORY_QUANTITY = 10;

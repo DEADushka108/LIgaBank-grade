@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {codes} from '../../utils/const';
+import {currencyCodes} from '../../utils/const';
 
 const withCodes = (Component) => {
   class WithCodes extends PureComponent {
@@ -7,8 +7,8 @@ const withCodes = (Component) => {
       super(props);
 
       this.state = {
-        sellCode: codes[0],
-        buyCode: codes[0],
+        sellCode: currencyCodes[0],
+        buyCode: currencyCodes[0],
       };
 
       this._handleSellCodeChange = this._handleSellCodeChange.bind(this);

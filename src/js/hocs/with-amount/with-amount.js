@@ -21,11 +21,11 @@ const withAmount = (Component) => {
       if (exchangeCurrency !== prevProps.exchangeCurrency) {
         if (this.state.amountInFromCurrency) {
           this.setState({
-            buyAmount: Number(this.state.sellAmount * exchangeCurrency).toFixed(2),
+            buyAmount: Number(this.state.sellAmount * exchangeCurrency),
           });
         } else {
           this.setState({
-            sellAmount: Number(this.state.buyAmount / exchangeCurrency).toFixed(2),
+            sellAmount: Number(this.state.buyAmount / exchangeCurrency),
           });
         }
       }
@@ -34,8 +34,8 @@ const withAmount = (Component) => {
     _handleSellAmountChange(evt) {
       const {exchangeCurrency} = this.props;
       this.setState({
-        sellAmount: Number(evt.target.value).toFixed(2),
-        buyAmount: Number(evt.target.value * exchangeCurrency).toFixed(2),
+        sellAmount: Number(evt.target.value),
+        buyAmount: Number(evt.target.value * exchangeCurrency),
         amountInFromCurrency: true,
       });
     }
@@ -43,8 +43,8 @@ const withAmount = (Component) => {
     _handleBuyAmountChange(evt) {
       const {exchangeCurrency} = this.props;
       this.setState({
-        buyAmount: Number(evt.target.value).toFixed(2),
-        sellAmount: Number(evt.target.value / exchangeCurrency).toFixed(2),
+        buyAmount: Number(evt.target.value),
+        sellAmount: Number(evt.target.value / exchangeCurrency),
         amountInFromCurrency: false,
       });
     }

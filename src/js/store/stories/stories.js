@@ -1,3 +1,4 @@
+import {MAX_HISTORY_QUANTITY} from '../../utils/const';
 import {extend} from '../../utils/utils';
 
 const initialState = {
@@ -24,7 +25,7 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ActionType.UPDATE_STORIES:
       return extend(state, {
-        stories: [action.payload, ...state.stories].slice(0, 10),
+        stories: [action.payload, ...state.stories].slice(0, MAX_HISTORY_QUANTITY),
       });
     case ActionType.DELETE_STORIES:
       return extend(state, {
