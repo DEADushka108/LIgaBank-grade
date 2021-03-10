@@ -63,7 +63,7 @@ const Header = () => {
           <ul className="sign-in__list">
             <li className="sign-in__item">
               <Link to={AppRoute.LOGIN} className="sign-in__link">
-                <svg className="sign-in__icon">
+                <svg width="20px" height="22px" className="sign-in__icon">
                   <use xlinkHref="#sign-in"></use>
                 </svg>
                 <span className="sign-in__text">Войти в Интернет-банк</span>

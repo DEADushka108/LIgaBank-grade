@@ -17,17 +17,17 @@ class ConverterCard extends PureComponent {
   }
 
   componentDidUpdate() {
-    const {date, sellCode, buyCode, loadCurrencyExchange} = this.props;
-    loadCurrencyExchange(date, sellCode, buyCode);
+    const {date, sellCode, buyCode, onLoadCurrencyExchange} = this.props;
+    onLoadCurrencyExchange(date, sellCode, buyCode);
   }
 
   _handleChangeRates() {
-    const {date, sellCode, buyCode, loadCurrencyExchange} = this.props;
-    loadCurrencyExchange(date, sellCode, buyCode);
+    const {date, sellCode, buyCode, onLoadCurrencyExchange} = this.props;
+    onLoadCurrencyExchange(date, sellCode, buyCode);
   }
 
   _handleFormSubmit() {
-    const {updateStories, date, sellAmount, sellCode, buyAmount, buyCode} = this.props;
+    const {onUpdateStories, date, sellAmount, sellCode, buyAmount, buyCode} = this.props;
     const story = {
       date: moment(date).format(`DD.MM.YYYY`),
       sellAmount: Number(sellAmount).toFixed(2),
@@ -35,7 +35,7 @@ class ConverterCard extends PureComponent {
       buyAmount: Number(buyAmount).toFixed(2),
       buyCode,
     };
-    updateStories(story);
+    onUpdateStories(story);
   }
 
   render() {
@@ -58,7 +58,7 @@ class ConverterCard extends PureComponent {
                   }}/>
                 </p>
                 <p className="converter__item">
-                  <ConverterSelect onChange={onSellCodeChange}/>
+                  <ConverterSelect onCodeChange={onSellCodeChange}/>
                 </p>
               </li>
               <li className="converter__list-item converter__list-item--icons">
@@ -77,7 +77,7 @@ class ConverterCard extends PureComponent {
                   }}/>
                 </p>
                 <p className="converter__item">
-                  <ConverterSelect onChange={onBuyCodeChange}/>
+                  <ConverterSelect onCodeChange={onBuyCodeChange}/>
                 </p>
               </li>
             </ul>
@@ -109,7 +109,7 @@ ConverterCard.propTypes = {
   onSellAmountChange: PropTypes.func.isRequired,
   onBuyAmountChange: PropTypes.func.isRequired,
   onDateChange: PropTypes.func.isRequired,
-  updateStories: PropTypes.func.isRequired,
+  onUpdateStories: PropTypes.func.isRequired,
   date: PropTypes.string.isRequired,
   dateFrom: PropTypes.string.isRequired,
   dateTo: PropTypes.string.isRequired,
@@ -118,7 +118,7 @@ ConverterCard.propTypes = {
   stories: PropTypes.array.isRequired,
   sellCode: PropTypes.string.isRequired,
   buyCode: PropTypes.string.isRequired,
-  loadCurrencyExchange: PropTypes.func.isRequired,
+  onLoadCurrencyExchange: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
@@ -126,10 +126,10 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  loadCurrencyExchange(date, from, to) {
+  onLoadCurrencyExchange(date, from, to) {
     dispatch(CurrencyOperation.loadCurrencyExchange(date, from, to));
   },
-  updateStories(story) {
+  onUpdateStories(story) {
     dispatch(StoriesAction.updateStories(story));
   },
 });
